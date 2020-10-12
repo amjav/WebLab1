@@ -1,41 +1,117 @@
-#burgerMenu{
-    display:none;
+/* CSS Document */
+
+header,
+.mainContent,
+.row {
+ max-width: 1200px;
+ padding: 0 5px;
+ margin: auto;
 }
-header{
-    max-width: 1280px;
-    margin:auto;
+
+.container{
+	max-width: 1366px;
+	/* 1366x768	16:9*/
+	margin:auto;
 }
-header h2{
-    padding:10px;
+.burgerMenu, .mobH1{
+	display:none;
 }
-nav{
-    display:flex;
-    height: 80px;
-    justify-content: flex-end;
+header nav ul li h1{
+	display:block;
+	padding:0;
+	margin:5px;
+	font-size:1.2rem;
+	color: #DDEAF2;
 }
-nav ul{
-    display:flex;
+.banner{
+	background-image: url(../images/banner1-1366.jpg);
+	background-repeat: no-repeat;
+	height:200px;
 }
-nav ul li{
-    padding:4px;
-    border-bottom:none;
+.banner h2{
+	top:20px;
+	left:120px;
+	font-size: 8em;
+	justify-content: space-between;
 }
-nav ul li a{
-    margin:0 15px;
+
+/* desktop navigation */
+
+.mainNav{
+	padding: 8px 0;
+	height: auto;
 }
-nav ul li a:hover{
-    border-bottom:3px solid #fff;
+
+.mainNav .row ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
+
+.mainNav .row ul {
+	border: none;
+	padding: 0;
+}
+
+/* flexbox to add sidebar */
+
+.mainContent{
+	display: flex;
+}
+
 main{
-    max-width: 1280px;
-    margin:auto;
+	flex-basis: 70%;
 }
-.articles{
-    flex-wrap: nowrap;
+
+.sideBar{
+	background-color: #ddceaa;
+	flex-basis: 30%;
 }
-@media only screen and (min-width: 680px) and (max-width:1280px){
-    /* Add rules for tablets */
-    header h2{
-        color:#f00;
-    }
+
+.newsItem{
+	flex-basis: 33%;
 }
+
+/* USING FLEXBOX TO CREATE TWO COLUMNS */
+
+.strapline {
+	display: flex;
+   }
+   .straplinetxt,
+   .straplineImg {
+	padding: 0 5px;
+	flex-basis: 50%;
+   }
+   .straplineImg > img {
+	width: 100%;
+   }
+
+   /* burger menu */
+
+   .burgerMenu{
+	   display: none;
+   }
+
+   /* header */
+
+   header{
+	   justify-content: flex-end;
+	   padding:0 0 0 5px;
+   }
+
+   .logo{
+	   padding: 5px 0px;
+	   flex-basis: 85%;
+	   position: relative;
+   }
+
+   .loginLinks{
+	   flex-basis: 40%;
+	   padding: 5px 0;
+   }
+
+   .logo img{
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+   }
